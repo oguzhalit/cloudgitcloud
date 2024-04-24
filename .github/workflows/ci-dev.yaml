@@ -28,12 +28,10 @@ jobs:
 
     - name: Run Test
       run: pytest 
-
   Release:
     name: Create Release
     needs: [TestLint]
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
     steps:
     - uses: actions/checkout@v2
 
@@ -51,7 +49,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
   Build:
-    needs: [TestLint]
+    needs: [Release]
     name: Build Docker Image
     runs-on: ubuntu-latest
     steps:
