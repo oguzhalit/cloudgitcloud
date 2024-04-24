@@ -1,7 +1,7 @@
 name: CI-Dev
 on:
   push:
-    branches: [ development,main ]
+    branches: [ development, main ]
   pull_request:
     branches: [ main ]
 jobs:
@@ -47,7 +47,7 @@ jobs:
           @semantic-release/exec
           conventional-changelog-eslint
         branches: |
-          ['main','development']
+          ['main']
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
   Build:
