@@ -1,7 +1,7 @@
 name: CI-Dev
 on:
   push:
-    branches: [ main ]
+    branches: [ development ]
 
 jobs:
   TestLint:
