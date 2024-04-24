@@ -13,7 +13,9 @@ health = HealthCheck()
 
 app.add_url_rule('/healthcheck', 'healthcheck', view_func=lambda: health.run())
 
-
+"""
+Write Func
+"""
 def write_user(name,surname):
     """
     Write User
