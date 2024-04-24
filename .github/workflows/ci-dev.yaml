@@ -3,8 +3,7 @@ on:
   push:
     branches: [ development ]
   pull_request:
-    branches: [ main  ]
-
+    branches: [ main ]
 jobs:
   TestLint:
     name: TestLint
