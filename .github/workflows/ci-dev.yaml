@@ -2,7 +2,8 @@ name: CI-Dev
 on:
   push:
     branches: [ development ]
-
+  pull_request:
+    branches: [ main ]
 jobs:
   TestLint:
     name: TestLint
