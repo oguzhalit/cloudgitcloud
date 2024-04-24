@@ -1,11 +1,11 @@
 name: CI-Dev
 on:
   push:
-    branches: [ Development ]
+    branches: [ main ]
 
 jobs:
   TestLint:
-    name: Lint
+    name: TestLint
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -30,7 +30,7 @@ jobs:
       run: pytest 
   Release:
     name: Create Release
-    needs: [Lint, Test]
+    needs: [TestLint]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
