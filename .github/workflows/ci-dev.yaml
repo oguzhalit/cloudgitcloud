@@ -39,10 +39,11 @@ jobs:
       uses: cycjimmy/semantic-release-action@v2
       id: semantic
       with:
-        semantic_version: 16
+        semantic_version: 19.0.5
         extra_plugins: |
           @semantic-release/changelog
           @semantic-release/git
+          @semantic-release/exec
           conventional-changelog-eslint
         branches: |
           ['main']
